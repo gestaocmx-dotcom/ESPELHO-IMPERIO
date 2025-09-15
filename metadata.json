@@ -1,0 +1,7 @@
+{
+  "name": "Império Progressivas",
+  "description": "Landing page para o salão Império Progressivas, especializado em alisamento de cabelo. Agende sua transformação e tenha fios lisos, brilhantes e com cara de salão de luxo.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
