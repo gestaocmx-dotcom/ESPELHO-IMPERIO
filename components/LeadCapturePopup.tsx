@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 
 interface LeadCapturePopupProps {
-  onSubmit: (data: { name: string; email: string; phone: string }) => void;
+  onSubmit: (data: { name: string; phone: string }) => void;
 }
 
 const LeadCapturePopup: React.FC<LeadCapturePopupProps> = ({ onSubmit }) => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && email && phone) {
-      onSubmit({ name, email, phone });
+    if (name && phone) {
+      onSubmit({ name, phone });
     }
   };
 
@@ -30,18 +29,6 @@ const LeadCapturePopup: React.FC<LeadCapturePopupProps> = ({ onSubmit }) => {
               placeholder="Seu nome completo"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full bg-gray-800 border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-colors"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="sr-only">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Seu melhor e-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full bg-gray-800 border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-colors"
             />

@@ -31,7 +31,7 @@ const BeforeAfter: React.FC = () => {
     <section id="antes-depois" className="py-20 px-4 bg-black">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Veja a <span className="gold-text-gradient">transformação</span>
+          Veja quem já viveu a <span className="gold-text-gradient">transformação</span>
         </h2>
         <p className="text-lg text-gray-300 mb-12">
             A transformação que você também pode conquistar.
